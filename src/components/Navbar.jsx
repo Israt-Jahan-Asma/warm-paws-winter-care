@@ -30,7 +30,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-secondary text-accent">Login</a>
+                <NavLink to='/login' className="btn bg-secondary text-accent">Login</NavLink>
             </div>
       </div>
     );
