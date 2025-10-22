@@ -1,0 +1,74 @@
+[
+    {
+        "serviceId": 101,
+        "serviceName": "Heated Bed & Shelter Installation",
+        "providerName": "WarmHome Pet Solutions",
+        "providerEmail": "support@warmhome.com",
+        "price": 75.00,
+        "rating": 4.7,
+        "slotsAvailable": 8,
+        "description": "Professional setup of heated outdoor shelters or indoor pet beds to ensure a warm retreat from the cold.",
+        "image": "https://i.postimg.cc/pdSSdrBX/Gemini-Generated-Image-nf959gnf959gnf95.png",
+        "category": "Home Setup"
+    },
+    {
+        "serviceId": 102,
+        "serviceName": "Winter Coat & Boot Fitting",
+        "providerName": "Tailored Paws Apparel",
+        "providerEmail": "sales@tailoredpaws.com",
+        "price": 25.00,
+        "rating": 4.9,
+        "slotsAvailable": 4,
+        "description": "Custom fitting session for insulated coats and protective paw boots to prevent frostbite and salt irritation.",
+        "image": "https://i.postimg.cc/2y7TnSnk/Gemini-Generated-Image-nf959gnf959gnf95-1.png",
+        "category": "Clothing & Safety"
+    },
+    {
+        "serviceId": 103,
+        "serviceName": "Moisturizing Paw Wax Application",
+        "providerName": "Pawsitivity Groomers",
+        "providerEmail": "book@pawsitivity.com",
+        "price": 15.00,
+        "rating": 4.8,
+        "slotsAvailable": 12,
+        "description": "Deep moisturizing wax treatment for paws to protect against snow, ice, de-icing chemicals, and dryness.",
+        "image": "https://i.postimg.cc/L5pNq1gM/Gemini-Generated-Image-nf959gnf959gnf95-2.png",
+        "category": "Grooming & Hygiene"
+    },
+    {
+        "serviceId": 104,
+        "serviceName": "Senior Pet Joint Health Massage",
+        "providerName": "Comfort & Care Vet Clinic",
+        "providerEmail": "vetcare@comfortclinic.com",
+        "price": 60.00,
+        "rating": 4.6,
+        "slotsAvailable": 5,
+        "description": "Therapeutic massage and supplement consultation to ease joint pain and arthritis flare-ups common in cold weather.",
+        "image": "https://i.postimg.cc/cCSXKntS/Gemini-Generated-Image-nf959gnf959gnf95-3.png",
+        "category": "Health & Wellness"
+    },
+    {
+        "serviceId": 105,
+        "serviceName": "Indoor Enrichment & Exercise Plan",
+        "providerName": "ActivePaws Trainers",
+        "providerEmail": "train@activepaws.com",
+        "price": 40.00,
+        "rating": 4.9,
+        "slotsAvailable": 6,
+        "description": "Customized training and activity plan using puzzle toys and indoor games to keep pets mentally and physically stimulated.",
+        "image": "https://i.postimg.cc/mks8cH1B/Gemini-Generated-Image-nf959gnf959gnf95-4.png",
+        "category": "Behavior & Training"
+    },
+    {
+        "serviceId": 106,
+        "serviceName": "Winter Nutrition & Diet Review",
+        "providerName": "PetLife Dietitians",
+        "providerEmail": "diet@petlife.com",
+        "price": 35.00,
+        "rating": 4.5,
+        "slotsAvailable": 7,
+        "description": "Consultation on adjusting your pet's caloric intake and hydration needs for optimal health during the winter months.",
+        "image": "https://i.postimg.cc/xdWP74Q1/Gemini-Generated-Image-qzmr8qzmr8qzmr8q.png",
+        "category": "Nutrition"
+    }
+]

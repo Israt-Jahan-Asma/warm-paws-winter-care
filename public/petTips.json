@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Keep Them Warm",
+        "description": "Dress your pets in cozy sweaters or jackets to protect from the cold.",
+        "icon": "❄️"
+    },
+    {
+        "id": 2,
+        "title": "Protect Their Paws",
+        "description": "Use pet-friendly paw balm or booties to prevent ice and salt irritation.",
+        "icon": "🐾"
+    },
+    {
+        "id": 3,
+        "title": "Hydration Matters",
+        "description": "Cold weather can dehydrate pets; always provide fresh water.",
+        "icon": "💧"
+    },
+    {
+        "id": 4,
+        "title": "Limit Outdoor Time",
+        "description": "Shorten walks in extreme cold and supervise your pets outdoors.",
+        "icon": "🕒"
+    },
+    {
+        "id": 5,
+        "title": "Check for Hypothermia",
+        "description": "Watch for shivering or lethargy and keep pets inside during extreme cold.",
+        "icon": "⚠️"
+    }
+]
