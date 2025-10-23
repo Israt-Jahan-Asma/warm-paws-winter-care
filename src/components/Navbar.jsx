@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router';
 import { use } from 'react';
 import toast from 'react-hot-toast';
+import userIcon from '/icons8-user-50.png';
 import { AuthContext } from '../provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = use(AuthContext)
@@ -26,7 +27,7 @@ const Navbar = () => {
         </>
     return (
         <div className="navbar w-11/12 mx-auto">
-            <div>{user && user.email}</div>
+            
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +47,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-                <img className='w-10 h-10 object-cover' src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="" />
+                <img className='w-13 h-13 object-cover border rounded-full p-2' src={`${user ? user.photoURL : userIcon}`} alt="" />
                 {
                     user ? <button onClick={handleLogout} className="btn bg-secondary text-accent">LogOut</button> : <NavLink to='/login' className="btn bg-secondary text-accent">Login</NavLink>
                 }

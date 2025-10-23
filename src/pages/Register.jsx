@@ -1,9 +1,12 @@
-import React, { use } from 'react';
-import { Link } from 'react-router';
+import React, { use, useState } from 'react';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
 const Register = () => {
-    const {createUser, setUser}= use(AuthContext)
+    const [passwordError, setPasswordError] = useState('');
+    const {createUser, setUser, updateUser}= use(AuthContext)
+
+    const navigate = useNavigate()
     const handleRegister=(e)=>{
         e.preventDefault()
        
@@ -13,17 +16,47 @@ const Register = () => {
         const email = form.email.value
         const password = form.password.value
         
+        // pass validation 
+        if (password.length < 6) {
+            toast.error('Password must be at least 6 characters long.');
+            return;
+        }
+        if (!/[A-Z]/.test(password)) {
+            toast.error('Password must contain at least one uppercase letter.');
+            return;
+        }
+        if (!/[a-z]/.test(password)) {
+            toast.error('Password must contain at least one lowercase letter.');
+            return;
+        }
+
         createUser(email, password)
         .then(result=>{
             const user =result.user
-            setUser(user);
-            toast.success('Registration successfully done.')
+            updateUser({ displayName: name, photoURL: photo})
+            .then(()=>{
+                setUser({ 
+                    ...user, displayName: name, photoURL: photo 
+
+                });
+                toast.success('Registration successfully done.')
+                navigate('/')
+                form.reset()
+                
+            }).catch((error) => {
+                setUser(user)
+               console.log(error);
+               
+            });
+              
+            
             
         })
         .catch(error=>{
             const errorCode = error.code;
             const errorMessage = error.message;
-            toast.error(errorCode, errorMessage)
+            toast.error(errorCode)
+            setPasswordError(errorCode)
         })
         
         
@@ -50,6 +83,14 @@ const Register = () => {
 
                         <label className="label">Password</label>
                         <input name='password' type="password" className="input" placeholder="Password" required />
+
+                        {/* pass error check  */}
+
+                        {passwordError && (
+                            <p className='text-secondary text-sm font-medium pt-1'>
+                                {passwordError}
+                            </p>
+                        )}
 
                         <p className='font-semibold pt-5'>Already Have an Account? <Link className='text-secondary' to='/login'> Login</Link></p>
 

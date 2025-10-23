@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
 import Slider from '../components/Slider';
 import Services from '../components/Services';
-
+import { PropagateLoader } from "react-spinners";
+import BookSection from '../components/BookSection';
 const Home = () => {
     return (
         <div>
@@ -9,11 +10,12 @@ const Home = () => {
             <Suspense fallback={
                 
                 <div className="flex justify-center items-center py-20 min-h-[30vh]">
-                    <span className="loading loading-bars loading-xl text-primary"></span>
+                    <PropagateLoader color="#E1875E" />
                 </div>
             }>
                 <Services />
             </Suspense>
+            <BookSection></BookSection>
         </div>
     );
 };

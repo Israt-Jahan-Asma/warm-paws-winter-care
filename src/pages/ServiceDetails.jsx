@@ -19,8 +19,10 @@ const ServiceDetails = () => {
     }
     const handleBooking=(e)=>
     {
+        const form = e.target;
         e.preventDefault();
         toast.success('🎉 Congratulations! You have Book the Service.')
+        form.reset();
     }
 
     return (
@@ -44,10 +46,10 @@ const ServiceDetails = () => {
                         <fieldset className="fieldset">
                             
                             <label className="label">Name</label>
-                            <input type="text" className="input" placeholder="Name" />
+                            <input type="text" className="input" placeholder="Name" required />
 
                             <label className="label">Email</label>
-                            <input type="email" className="input" placeholder="Email" />
+                            <input type="email" className="input" placeholder="Email" required/>
                             <button className="btn btn-neutral mt-4">Book</button>
                         </fieldset>
                   </form>
