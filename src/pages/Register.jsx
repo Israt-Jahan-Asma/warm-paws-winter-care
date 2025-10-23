@@ -17,6 +17,7 @@ const Register = () => {
         .then(result=>{
             const user =result.user
             setUser(user);
+            toast.success('Registration successfully done.')
             
         })
         .catch(error=>{

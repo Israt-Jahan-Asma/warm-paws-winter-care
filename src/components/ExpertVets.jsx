@@ -12,7 +12,7 @@ const ExpertVets = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                 {vets.map(vet => (
-                    <div key={vet.id} className="card bg-base-100 shadow-lg rounded-lg text-center p-6">
+                    <div data-aos="flip-left" key={vet.id} className="card bg-base-100 shadow-lg rounded-lg text-center p-6">
                         <img
                             src={vet.image}
                             alt={vet.name}

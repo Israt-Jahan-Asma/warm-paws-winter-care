@@ -20,7 +20,7 @@ const Slider = () => {
             modules={[Pagination, Autoplay]}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
-            className="mySwiper w-full h-[700px]" // adjust height as needed
+            className="mySwiper w-full h-[800px]" // adjust height as needed
         >
             {images.map((src, index) => (
                 <SwiperSlide key={index}>

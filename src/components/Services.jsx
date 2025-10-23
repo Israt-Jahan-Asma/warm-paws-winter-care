@@ -29,7 +29,7 @@ const Services = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-15  w-11/12 mx-auto">
 
                     {services.map(service => (
-                        <div key={service.id} className="card bg-base-100 shadow-lg" data-aos="zoom-in">
+                        <div key={service.serviceId} className="card bg-base-100 shadow-lg" data-aos="zoom-in">
                             <figure>
                                 <img src={service.image} alt={service.name} className="w-full h-96 object-cover" />
                             </figure>
