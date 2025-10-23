@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData, useParams } from 'react-router';
-import { toast } from 'react-toastify';
 
 const ServiceDetails = () => {
     const { id } = useParams();

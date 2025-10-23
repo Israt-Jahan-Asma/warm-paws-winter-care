@@ -29,8 +29,10 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end gap-2">
+                <img className='w-10 h-10 object-cover' src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="" />
                 <NavLink to='/login' className="btn bg-secondary text-accent">Login</NavLink>
+               
             </div>
       </div>
     );

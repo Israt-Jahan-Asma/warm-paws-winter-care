@@ -12,7 +12,7 @@ const PetTips = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 px-4   w-11/12 mx-auto">
                 {winterTips.map(tip => (
-                    <div key={tip.id} className=" p-6 rounded-lg shadow-md text-center">
+                    <div data-aos="zoom-out-up" key={tip.id} className=" p-6 rounded-lg shadow-md text-center">
                         <div className="text-5xl mb-4">{tip.icon}</div>
                         <h3 className="text-xl font-semibold mb-2">{tip.title}</h3>
                         <p className="text-gray-600">{tip.description}</p>
