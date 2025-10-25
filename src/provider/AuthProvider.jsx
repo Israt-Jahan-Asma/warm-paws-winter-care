@@ -1,5 +1,5 @@
 import React, { createContext, use, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from '../firebase/firebase.config';
 
 export const AuthContext = createContext()
@@ -8,6 +8,7 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading]=useState(true)
+    const googleProvider = new GoogleAuthProvider()
    
 
     const createUser = (email, password) => {
@@ -24,9 +25,26 @@ const AuthProvider = ({ children }) => {
        return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const updateUser=(updatedData)=>{
-        return updateProfile(auth.currentUser, updatedData)
+    const signInWithGoogle = ()=>{
+        setLoading(true)
+        return signInWithPopup(auth, googleProvider)
     }
+
+    // const updateUser=(updatedData)=>{
+    //     return updateProfile(auth.currentUser, updatedData)
+    // }
+    const updateUser = async (updatedData) => {
+        try {
+            await updateProfile(auth.currentUser, updatedData);
+            await auth.currentUser.reload();
+            setUser({ ...auth.currentUser });
+            return auth.currentUser;
+            
+        } catch (error) {
+            console.error("Profile update failed:", error);
+        }
+    };
+      
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
@@ -44,7 +62,8 @@ const AuthProvider = ({ children }) => {
         signIn,
         loading,
         setLoading,
-        updateUser
+        updateUser,
+        signInWithGoogle
     }
     return (
         <AuthContext value={authData}>{children}</AuthContext>

@@ -6,13 +6,14 @@ import userIcon from '/icons8-user-50.png';
 import { AuthContext } from '../provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = use(AuthContext)
+    const{displayName, photoURL} = user || {}
     const handleLogout= ()=>{
         
         logOut()
             .then(() => {
                 toast.success('You Logout Successfully')
             }).catch((error) => {
-            console.log(error);
+            
                 toast.error(error)
             
           });
@@ -46,8 +47,9 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end gap-2">
-                <img className='w-13 h-13 object-cover border rounded-full p-2' src={`${user ? user.photoURL : userIcon}`} alt="" />
+            <div className="navbar-end gap-2 ">
+
+                <img className='w-13 h-13 object-cover border rounded-full p-2' src={`${user ? user.photoURL : userIcon}`} alt="" title={user?.displayName || "User"} />
                 {
                     user ? <button onClick={handleLogout} className="btn bg-secondary text-accent">LogOut</button> : <NavLink to='/login' className="btn bg-secondary text-accent">Login</NavLink>
                 }

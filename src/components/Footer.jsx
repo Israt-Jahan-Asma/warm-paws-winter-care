@@ -5,7 +5,7 @@ const Footer = () => {
     
         <div className='mx-auto w-11/12 '>
             <footer className="footer sm:footer-horizontal text-base-content py-10 justify-between">
-                <nav>
+                <nav className='text-accent'>
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
@@ -19,7 +19,7 @@ const Footer = () => {
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
                 </nav>
-                <nav>
+                <nav className='text-accent'>
                     <h6 className="footer-title">Social</h6>
                     <div className="grid grid-flow-col gap-4">
                         <a>

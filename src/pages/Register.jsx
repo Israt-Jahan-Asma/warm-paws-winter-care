@@ -2,20 +2,27 @@ import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
+import { LuEye } from "react-icons/lu";
+import { LuEyeClosed } from "react-icons/lu";
+import { FaGoogle } from "react-icons/fa";
+import { GoogleAuthProvider } from 'firebase/auth';
+
 const Register = () => {
     const [passwordError, setPasswordError] = useState('');
-    const {createUser, setUser, updateUser}= use(AuthContext)
+    const { createUser, setUser, updateUser, signInWithGoogle } = use(AuthContext)
+    const [show, setShow] = useState(false)
+    const googleProvider = new GoogleAuthProvider()
 
     const navigate = useNavigate()
-    const handleRegister=(e)=>{
+    const handleRegister = (e) => {
         e.preventDefault()
-       
+
         const form = e.target
         const name = form.name.value
         const photo = form.photo.value
         const email = form.email.value
         const password = form.password.value
-        
+
         // pass validation 
         if (password.length < 6) {
             toast.error('Password must be at least 6 characters long.');
@@ -31,44 +38,45 @@ const Register = () => {
         }
 
         createUser(email, password)
-        .then(result=>{
-            const user =result.user
-            updateUser({ displayName: name, photoURL: photo})
-            .then(()=>{
-                setUser({ 
-                    ...user, displayName: name, photoURL: photo 
+            .then(result => {
+                // update profile with name + photo
+                return updateUser({ displayName: name, photoURL: photo });
+            })
+            .then(() => {
+                toast.success('Registration successfully done!');
+                form.reset();
+                navigate('/');
+            })
+            
+            .catch(error => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                toast.error(errorCode)
+                setPasswordError(errorCode)
+            })
+        }
+        const handleGoogleSignIn = () => {
+        signInWithGoogle(googleProvider)
+                .then(result => {
+                    
+                    toast.success('You have login successfully!')
+                    navigate(`${location.state ? location.state : '/'}`)    
 
-                });
-                toast.success('Registration successfully done.')
-                navigate('/')
-                form.reset()
-                
-            }).catch((error) => {
-                setUser(user)
-               console.log(error);
-               
-            });
-              
-            
-            
-        })
-        .catch(error=>{
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            toast.error(errorCode)
-            setPasswordError(errorCode)
-        })
-        
-        
-        
-    }
-    return(
+                })
+                .catch(error => {
+                    
+                    toast.error(error.message)
+                   
+                })
+            }       
+   
+    return (
         <div className='flex justify-center max-h-screen items-center py-10 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto my-10'>
             <div className="card-body space-y-5">
                 <h2 className='text-2xl font-bold text-primary text-center'>Register Your Account</h2>
                 <form className='w-80 mx-auto' onSubmit={handleRegister}>
 
-                    <fieldset className="fieldset">
+                    <fieldset className="fieldset relative">
 
                         <label className="label">Name</label>
                         <input name='name' type="text" className="input" required placeholder="Name" />
@@ -82,7 +90,13 @@ const Register = () => {
                         <input name='email' type="email" className="input" required placeholder="Email" />
 
                         <label className="label">Password</label>
-                        <input name='password' type="password" className="input" placeholder="Password" required />
+                        <input name='password' type={show ? 'text' : 'password'} className="input" placeholder="Password" required />
+
+                        {/* password toggle */}
+                        <span onClick={() => setShow(!show)} className='absolute  top-62 right-3 z-10 '>
+                            {
+                                show ? <LuEye className=' h-4 w-4' /> : <LuEyeClosed className=' h-4 w-4' />
+                            } </span>
 
                         {/* pass error check  */}
 
@@ -91,10 +105,29 @@ const Register = () => {
                                 {passwordError}
                             </p>
                         )}
+                        
 
+                        {/* regular button  */}
+
+                        <button type='submit' className="btn btn-neutral mt-2">Register</button>
+                        
+                        {/* divider */}
+                        <div className='flex items-center justify-center gap-2 mt-3'>
+                            <div className='h-px w-20 bg-secondary '></div>
+                            <span>or</span>
+                            <div className='h-px w-20 bg-secondary '></div>
+                        </div>
+
+                        {/* google signin button  */}
+
+                        <button className='flex items-center justify-center gap-3 bg-secondary py-2 rounded-sm mt-2 text-accent font-semibold cursor-pointer'
+                            type='button'
+                            onClick={handleGoogleSignIn}>
+                            <FaGoogle className='w-5 h-5 text-accent' />
+                            Continue with Google
+                        </button>
+                        
                         <p className='font-semibold pt-5'>Already Have an Account? <Link className='text-secondary' to='/login'> Login</Link></p>
-
-                        <button type='submit' className="btn btn-neutral mt-4">Register</button>
                     </fieldset>
                 </form>
             </div>

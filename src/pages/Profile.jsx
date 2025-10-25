@@ -11,7 +11,7 @@ const Profile = () => {
 
     const handleUpdate = (e) => {
         e.preventDefault();
-        updateUser(user, {
+        updateUser({
             displayName: name,
             photoURL: photo,
         })
@@ -22,6 +22,7 @@ const Profile = () => {
                     photoURL: photo,
                 });
                 toast.success("Profile updated successfully!");
+                e.target.reset()
             })
             .catch((error) => {
                 toast.error(error.message);
