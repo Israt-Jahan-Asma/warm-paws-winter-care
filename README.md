@@ -1,16 +1,49 @@
-# React + Vite
+# WarmPaws Pet Care
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+WarmPaws Pet Care is a responsive React web application designed for pet care services. The website provides users with information about services, booking options, and contact forms, offering a smooth and interactive experience for pet owners.
 
-Currently, two official plugins are available:
+## Live URL
+https://warm-paws-pet-care.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
+- Fully responsive design with Tailwind CSS and DaisyUI
+- Animated scroll effects using AOS
+- Smooth navigation with React Router
+- Firebase integration for authentication and data storage
+- Interactive sliders using Swiper
+- Toast notifications with React Hot Toast and React Toastify
+- Loading spinners using React Spinners
+- SEO-friendly structure
+- Clean and maintainable code with ESLint
 
-## React Compiler
+## Technologies & NPM Packages
+**Frontend:** React, TailwindCSS, DaisyUI  
+**Routing:** React Router  
+**Animations:** AOS, Swiper  
+**State & Notifications:** React Hot Toast, React Toastify, React Spinners  
+**Firebase:** Authentication, Firestore, Storage  
+**Linting:** ESLint, eslint-plugin-react-hooks  
+**Development Tools:** Vite, @vitejs/plugin-react  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### **Dependencies**
+- react, react-dom, react-router
+- firebase
+- tailwindcss, @tailwindcss/vite, daisyui
+- aos
+- swiper
+- react-hot-toast, react-toastify
+- react-spinners, react-icons
 
-## Expanding the ESLint configuration
+### **DevDependencies**
+- eslint, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh
+- @types/react, @types/react-dom
+- vite, @vitejs/plugin-react
+- globals
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/warmpaws-pet-care.git
+cd warmpaws-pet-care

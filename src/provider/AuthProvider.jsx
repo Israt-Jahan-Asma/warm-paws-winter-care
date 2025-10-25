@@ -1,6 +1,7 @@
 import React, { createContext, use, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from '../firebase/firebase.config';
+import toast from 'react-hot-toast';
 
 export const AuthContext = createContext()
 const auth = getAuth(app);
@@ -41,7 +42,7 @@ const AuthProvider = ({ children }) => {
             return auth.currentUser;
             
         } catch (error) {
-            console.error("Profile update failed:", error);
+            toast.error("Profile update failed:", error);
         }
     };
       

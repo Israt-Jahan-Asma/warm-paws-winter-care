@@ -15,7 +15,11 @@
   --color-base-: #FDF1DF;
   --color-accent: #FDF1DF;
 }
-
+.swiper,
+.swiper-slide {
+  width: 100% !important;
+  height: 100% !important;
+}
 * {
   font-family: "Poppins", sans-serif;
 }

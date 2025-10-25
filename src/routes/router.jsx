@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, UNSAFE_WithHydrateFallbackProps } from "react-router";
 import MainLayout from "../Layouts/MainLayout";
 import Home from "../pages/Home";
 import ServiceDetails from "../pages/ServiceDetails";
@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import PrivateRoute from "../provider/PrivateRoute";
 import Profile from "../pages/Profile";
 import ForgetPassword from "../components/ForgetPassword";
+import { PropagateLoader } from "react-spinners";
 
 const router = createBrowserRouter(
     [
@@ -23,7 +24,8 @@ const router = createBrowserRouter(
                     element: <PrivateRoute>
                         <ServiceDetails></ServiceDetails> 
                     </PrivateRoute> ,
-                    loader:()=>fetch('/service.json')
+                    loader:()=>fetch('/service.json'),
+                    hydrateFallbackElement: <PropagateLoader color="#E1875E" />
                 },
                 {
                     path: 'login',
