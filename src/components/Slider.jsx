@@ -1,5 +1,5 @@
-// Slider.jsx
-import React, { useEffect, useRef } from 'react';
+
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -29,7 +29,7 @@ const Slider = () => {
     //     return () => clearTimeout(timeout);
     // }, []);
     return (
-        <div className="relative w-full h-[80vh] md:h-[90vh] overflow-hidden ">
+        <div className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden ">
             <Swiper
                 direction="vertical"
                 pagination={{ clickable: true }}
