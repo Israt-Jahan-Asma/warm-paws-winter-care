@@ -75,7 +75,7 @@ const Footer = () => {
 
             {/* --- Bottom Line --- */}
             <div className="border-t border-gray-300 mt-10 pt-5 text-center text-sm text-accent ">
-                © {new Date().getFullYear()} PetCare Co. | All Rights Reserved
+                © {new Date().getFullYear()} PetCare Co. | All Rights Reserved by PetCare.
             </div>
         </footer>
     );

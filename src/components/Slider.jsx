@@ -27,7 +27,7 @@ const Slider = () => {
     //         }
     //     }, 400);
     //     return () => clearTimeout(timeout);
-    // }, []);
+    // }, []); 
     return (
         <div className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden ">
             <Swiper
