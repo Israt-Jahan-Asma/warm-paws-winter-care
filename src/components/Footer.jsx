@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 
 const Footer = () => {
     return (
-        <footer className=" text-secondary py-12 mt-16">
+        <footer className=" text-secondary py-12 mt-1 md:12">
             <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start md:items-center">
 
                 {/* --- Logo Section --- */}
@@ -40,7 +40,7 @@ const Footer = () => {
                 </nav>
 
                 {/* --- Social Media Section --- */}
-                <nav className="text-accent  items-center justify-between md:items-start">
+                <nav className="text-accent flex flex-col items-center justify-between md:items-start">
                     <h6 className="footer-title text-lg font-semibold text-accent mb-3">Follow Us</h6>
                     <div className="flex gap-5">
 

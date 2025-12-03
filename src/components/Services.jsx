@@ -138,7 +138,7 @@ const Services = () => {
                                 <img
                                     src={service.image}
                                     alt={service.serviceName}
-                                    className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-t-xl"
+                                    className="w-full h-64 sm:h-60 md:h-60 lg:h-70 object-cover rounded-t-xl"
                                 />
                                 <div className="absolute inset-0 bg-black/20 hover:bg-black/40 transition-all duration-300 rounded-t-xl"></div>
                             </figure>

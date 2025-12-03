@@ -30,10 +30,10 @@ const ServiceDetails = () => {
         <div className="w-10/12 mx-auto py-16 space-y-20">
 
             {/*  Service Details Card */}
-            <div className="bg-base-200 shadow-xl rounded-3xl overflow-hidden border border-secondary flex flex-col md:flex-row">
+            <div className="bg-base-200 shadow-xl rounded-3xl overflow-hidden border border-secondary flex flex-col lg:flex-row">
 
                 {/* Image */}
-                <div className="md:w-1/2">
+                <div className="lg:w-1/2">
                     <img
                         src={cardDetails.image}
                         alt={cardDetails.serviceName}
@@ -42,7 +42,7 @@ const ServiceDetails = () => {
                 </div>
 
                 {/* Content */}
-                <div className="md:w-1/2 p-10  space-y-5">
+                <div className="lg:w-1/2 p-10  space-y-5">
                     <h1 className="text-4xl font-bold text-primary">
                         {cardDetails.serviceName}
                     </h1>
@@ -65,7 +65,7 @@ const ServiceDetails = () => {
             </div>
 
 
-                <div className='flex gap-5 w-full mx-auto justify-between '>
+                <div className='flex gap-5 w-full mx-auto justify-between flex-col lg:flex-row'>
                     <div>
                     <h3 className='text-3xl font-bold text-primary mb-6'> Book Now our expert vet</h3>
                     {/* Vet Cards Grid */}
@@ -97,7 +97,7 @@ const ServiceDetails = () => {
                     </div>
                     </div>
                 {/* ⭐ 2. Booking Form Column (EXISTING CODE) */}
-                <div className="bg-base-100 shadow-xl border border-secondary rounded-3xl p-12 w-1/2">
+                <div className="bg-base-100 shadow-xl border border-secondary rounded-3xl p-12 lg:w-1/2">
                     <h2 className="text-3xl font-bold text-center text-primary mb-10">
                         Book This Service
                     </h2>

@@ -73,7 +73,7 @@ const Navbar = () => {
             <div className=' bg-white shadow'>
 
         
-        <div className="navbar  md:w-10/12 mx-auto py-3   ">
+        <div className="navbar  md:w-10/12 mx-auto py-3 px-5 md:px-0  ">
             {/* Navbar Start */}
             <div className="navbar-start">
                 {/* Mobile Dropdown */}
