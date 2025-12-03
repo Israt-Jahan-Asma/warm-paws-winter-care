@@ -4,7 +4,7 @@ import { NavLink } from 'react-router';
 const Footer = () => {
     return (
         <footer className=" text-secondary py-12 mt-1 md:12">
-            <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start md:items-center">
+            <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start md:items-center">
 
                 {/* --- Logo Section --- */}
                 <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3">
