@@ -8,6 +8,8 @@ import PrivateRoute from "../provider/PrivateRoute";
 import Profile from "../pages/Profile";
 import ForgetPassword from "../components/ForgetPassword";
 import { PropagateLoader } from "react-spinners";
+import AboutUs from "../pages/AboutUs";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter(
     [
@@ -44,6 +46,14 @@ const router = createBrowserRouter(
                 {
                     path: 'forget-password',
                     element: <ForgetPassword></ForgetPassword>
+                },
+                {
+                    path: 'about-us',
+                    element: <AboutUs></AboutUs>
+                },
+                {
+                    path: 'contact-us',
+                    element: <Contact></Contact>
                 }
             ]
         },

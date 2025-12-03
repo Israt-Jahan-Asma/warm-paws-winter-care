@@ -5,6 +5,7 @@ import userIcon from '/icons8-user-50.png';
 import { AuthContext } from '../provider/AuthProvider';
 import { use } from 'react';
 import { ClipLoader } from 'react-spinners';
+import  Sticky from 'react-stickynode';
 
 const Navbar = () => {
     const { user, logOut, loading } = use(AuthContext);
@@ -33,6 +34,8 @@ const Navbar = () => {
                 </button>
             </li>
             <li><NavLink to="/profile" className="hover:text-secondary">My Profile</NavLink></li>
+            <li><NavLink to="/about-us" className="hover:text-secondary"> About Us</NavLink></li>
+            <li><NavLink to="/contact-us" className="hover:text-secondary">Contact Us</NavLink></li>
         </>
     );
     const UserDisplay = () => {
@@ -65,6 +68,9 @@ const Navbar = () => {
         }
     };
     return (
+        <Sticky enabled={true} top={0} innerZ={50}> 
+            <div className=' bg-white shadow'>
+
         
         <div className="navbar  md:w-11/12 mx-auto py-3   ">
             {/* Navbar Start */}
@@ -138,7 +144,8 @@ const Navbar = () => {
                 </div>
             
         </div>
-        
+            </div>
+        </Sticky>
     );
 };
 
