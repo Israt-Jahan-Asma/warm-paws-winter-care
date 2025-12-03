@@ -20,7 +20,8 @@ const Navbar = () => {
     const navLinks = (
         <>
             <li><NavLink to="/" className="hover:text-secondary">Home</NavLink></li>
-            <li>
+            <li><NavLink to="/all-service" className="hover:text-secondary">All Service</NavLink></li>
+            {/* <li>
                 <button
                     onClick={() => {
                         const section = document.getElementById('services-section');
@@ -32,7 +33,7 @@ const Navbar = () => {
                 >
                     Services
                 </button>
-            </li>
+            </li> */}
             <li><NavLink to="/profile" className="hover:text-secondary">My Profile</NavLink></li>
             <li><NavLink to="/about-us" className="hover:text-secondary"> About Us</NavLink></li>
             <li><NavLink to="/contact-us" className="hover:text-secondary">Contact Us</NavLink></li>

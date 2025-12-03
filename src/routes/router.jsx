@@ -10,6 +10,7 @@ import ForgetPassword from "../components/ForgetPassword";
 import { PropagateLoader } from "react-spinners";
 import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
+import Services from "../components/Services";
 
 const router = createBrowserRouter(
     [
@@ -54,6 +55,11 @@ const router = createBrowserRouter(
                 {
                     path: 'contact-us',
                     element: <Contact></Contact>
+                }
+                ,
+                {
+                    path: 'all-service',
+                    element: <Services></Services>
                 }
             ]
         },
