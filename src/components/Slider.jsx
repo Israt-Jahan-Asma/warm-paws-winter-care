@@ -29,7 +29,7 @@ const Slider = () => {
     //     return () => clearTimeout(timeout);
     // }, []); 
     return (
-        <div className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden ">
+        <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden ">
             <Swiper
                 direction="vertical"
                 pagination={{ clickable: true }}
@@ -44,7 +44,7 @@ const Slider = () => {
                             <img
                                 src={src}
                                 alt={`Slide ${index + 1}`}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object object-cover"
                             />
                             
                             <div className="absolute inset-0 bg-black/50"></div>

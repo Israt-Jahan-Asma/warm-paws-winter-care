@@ -23,9 +23,9 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/service-details/:id',
-                    element: <PrivateRoute>
-                        <ServiceDetails></ServiceDetails> 
-                    </PrivateRoute> ,
+                    element: 
+                        <ServiceDetails></ServiceDetails> ,
+                    
                     loader:()=>fetch('/service.json'),
                     hydrateFallbackElement: <PropagateLoader color="#E1875E" />
                 },

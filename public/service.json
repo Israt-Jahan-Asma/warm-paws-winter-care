@@ -70,5 +70,29 @@
         "description": "Consultation on adjusting your pet's caloric intake and hydration needs for optimal health during the winter months.",
         "image": "https://i.postimg.cc/xdWP74Q1/Gemini-Generated-Image-qzmr8qzmr8qzmr8q.png",
         "category": "Nutrition"
+    },
+    {
+        "serviceId": 107,
+        "serviceName": "Warm Water Bath & Blow-Dry",
+        "providerName": "SnowSoft Grooming Studio",
+        "providerEmail": "care@snowsoftgrooming.com",
+        "price": 45.00,
+        "rating": 4.8,
+        "slotsAvailable": 10,
+        "description": "Gentle warm-water bath followed by a soft blow-dry to keep your pet clean, warm, and protected from winter chill.",
+        "image": "https://plus.unsplash.com/premium_photo-1683133813802-7f3f128e87d1?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Grooming & Hygiene"
+    },
+    {
+        "serviceId": 108,
+        "serviceName": "Home Heating Safety Check",
+        "providerName": "CozyNest Pet Safety Team",
+        "providerEmail": "support@cozynestpets.com",
+        "price": 55.00,
+        "rating": 4.7,
+        "slotsAvailable": 6,
+        "description": "A complete inspection to ensure your home's heaters, fireplaces, and spaces are pet-safe during the colder months.",
+        "image": "https://plus.unsplash.com/premium_photo-1663926403570-94938c837508?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Home Setup"
     }
 ]
