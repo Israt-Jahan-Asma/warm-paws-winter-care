@@ -5,7 +5,7 @@ const ExpertVets = () => {
     const vets = use(vetPromise)
     return (
         <section className="py-16">
-            <div className='w-11/12 mx-auto'> 
+            <div className='w-10/12 mx-auto'> 
             {/* Section Header */}
             <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold text-primary">

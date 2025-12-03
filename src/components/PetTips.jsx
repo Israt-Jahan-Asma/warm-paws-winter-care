@@ -10,7 +10,7 @@ const PetTips = () => {
                 <p className="text-gray-600 mt-2">Keep your furry friends safe and cozy this winter.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 px-4   w-11/12 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 px-4   w-10/12 mx-auto">
                 {winterTips.map(tip => (
                     <div data-aos="zoom-out-up" key={tip.id} className=" p-6 rounded-lg shadow-md text-center">
                         <div className="text-5xl mb-4">{tip.icon}</div>
